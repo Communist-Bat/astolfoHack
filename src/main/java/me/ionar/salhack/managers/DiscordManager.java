@@ -17,7 +17,7 @@ public class DiscordManager
         _rpcModule = (DiscordRPCModule)ModuleManager.Get().GetMod(DiscordRPCModule.class);
 
         DiscordRPC lib = DiscordRPC.INSTANCE;
-        String applicationId = "719038221807386665";
+        String applicationId = "819367305162522656";
         String steamId = "";
         DiscordEventHandlers handlers = new DiscordEventHandlers();
         handlers.ready = (user) -> System.out.println("Ready!");
@@ -26,7 +26,7 @@ public class DiscordManager
         presence.startTimestamp = System.currentTimeMillis() / 1000; // epoch second
         lib.Discord_UpdatePresence(presence);
         presence.largeImageKey = "image";
-        presence.largeImageText = "http://salhack.com/";
+        presence.largeImageText = "sexy and very epic client";
         _thread = new Thread(() ->
         {
             while (!Thread.currentThread().isInterrupted())
