@@ -26,7 +26,7 @@ public class DiscordManager
         presence.startTimestamp = System.currentTimeMillis() / 1000; // epoch second
         lib.Discord_UpdatePresence(presence);
         presence.largeImageKey = "image";
-        presence.largeImageText = "sexy and very epic client";
+        presence.largeImageText = "sexy ass client";
         _thread = new Thread(() ->
         {
             while (!Thread.currentThread().isInterrupted())
