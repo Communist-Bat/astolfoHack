@@ -81,7 +81,7 @@ public class DiscordRPCModule extends Module
 
         if (Ionar.getValue())
         {
-            return "Thank you Ionar for SalHack!";
+            return "epic client";
         }
 
         if (GitHub.getValue())
