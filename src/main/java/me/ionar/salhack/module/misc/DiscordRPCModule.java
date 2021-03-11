@@ -13,12 +13,12 @@ public class DiscordRPCModule extends Module
     public final Value<Boolean> Username = new Value<Boolean>("Username", new String[] {"U"}, "Displays your username in the rich presence", true);
     public final Value<Boolean> ServerIP = new Value<Boolean>("ServerIP", new String[] {"S"}, "Displays your current playing server in the rich presence", true);
     public final Value<String> DetailsAddon = new Value<String>("DetailsAddon", new String[] {"D"}, "Displays a custom message after the previous", "Gaming");
-    public final Value<Boolean> Ionar = new Value<Boolean>("Real", new String[] {"U"}, "Says 'Totally real client'", true);
+    public final Value<Boolean> Ionar = new Value<Boolean>("Spoof Client", new String[] {"U"}, "Displays the text 'totally real client'", true);
     public final Value<Boolean> Speed = new Value<Boolean>("Speed", new String[] {"U"}, "Displays your speed in the rich presence", true);
     public final Value<Boolean> Movement = new Value<Boolean>("Movement", new String[] {"U"}, "Displays if you're flying/onground in the rich presence", true);
-    public final Value<Boolean> Crystalling = new Value<Boolean>("Crystalling", new String[] {"U"}, "Displays the current target from autocrystal", true);
-    public final Value<Boolean> Health = new Value<Boolean>("Health", new String[] {"U"}, "Displays your Health in the rich presence", true);
-    public final Value<Boolean> GitHub = new Value<Boolean>("GitHub", new String[] {"U"}, "Displays the github link", false);
+    public final Value<Boolean> Crystalling = new Value<Boolean>("Crystalling", new String[] {"U"}, "Displays the current target from AutoCrystal", true);
+    public final Value<Boolean> Health = new Value<Boolean>("Health", new String[] {"U"}, "Displays your HP in the rich presence", true);
+    public final Value<Boolean> GitHub = new Value<Boolean>("Astolfo", new String[] {"U"}, "Displays the text 'Astolfo Best Husbando'", false);
 
     public DiscordRPCModule()
     {
@@ -81,19 +81,19 @@ public class DiscordRPCModule extends Module
 
         if (Ionar.getValue())
         {
-            return "sexy ass client";
+            return "totally real client";
         }
 
         if (GitHub.getValue())
         {
-            return "The SalHack source is hosted at https://github.com/ionar2/salhack !";
+            return "Astolfo best husbando";
         }
 
 
         String result = "";
 
         if (Crystalling.getValue() && _autoCrystal.isEnabled() && _autoCrystal.getTarget() != null)
-            return "Crystalling " + _autoCrystal.getTarget() + " with SalHack's autocrystal!";
+            return "Crystalling " + _autoCrystal.getTarget() + " with AstolfoHack's AutoCrystal!";
 
         if (Movement.getValue())
         {
@@ -123,7 +123,7 @@ public class DiscordRPCModule extends Module
             if (!result.isEmpty())
                 result += " ";
 
-            result += Math.floor(mc.player.getHealth() + mc.player.getAbsorptionAmount()) + " health";
+            result += Math.floor(mc.player.getHealth() + mc.player.getAbsorptionAmount()) + " HP";
         }
 
         return result;
