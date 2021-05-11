@@ -1,13 +1,13 @@
 [
     {
-      "modid": "salhack",
-      "name": "SalHack",
-      "description": "SalHack utility mod.",
+      "modid": "astolfohack",
+      "name": "AstolfoHack",
+      "description": "Femboy SalHack utility mod.",
       "version": "${modVersion}",
       "mcversion": "${version_minecraft}",
       "url": "https://salhack.com",
       "updateUrl": "https://salhack.com",
-      "authorList": ["ionar"],
+      "authorList": ["ionar", "Communist Bat"],
       "credits": "ionar",
       "logoFile": "assets/salhack/imgs/SalHackWatermark.png",
       "screenshots": [],
